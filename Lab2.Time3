@@ -1,4 +1,4 @@
-## Time3.java
+### Time3.java
 ```java
 class Time3 {
     private int seconds;
