@@ -15,25 +15,25 @@ class Employee {
         boss.isBoss = true;
     }
 
-    public String getName() {
-        return name;
-    }
+    public String getName() { return name; }
+    public String getDepartmentName() { return departmentName; }
+    public Employee getBoss() { return boss; }
+    public boolean isBoss() { return isBoss; }
 
     @Override
     public String toString() {
         if (isBoss) {
             return name + " начальник отдела " + departmentName;
         } else if (boss != null) {
-            return name + " работает в отделе " + departmentName +
-                    ", начальник которого " + boss.getName();
+            return name + " работает в отделе " + departmentName + ", начальник которого " + boss.getName();
         } else {
-            return name + " работает в отделе " + departmentName +
-                    ", начальник которого не назначен";
+            return name + " работает в отделе " + departmentName + ", начальник которого не назначен";
         }
     }
 
-    public static void main(String[] args) {
-        // Создание сотрудников отдела IT
+    public static void demo() {
+        System.out.println("\n Система сотрудников");
+
         Employee petrov = new Employee("Петров", "IT");
         Employee kozlov = new Employee("Козлов", "IT");
         Employee sidorov = new Employee("Сидоров", "IT");
@@ -41,7 +41,6 @@ class Employee {
         petrov.setBoss(kozlov);
         sidorov.setBoss(kozlov);
 
-        
         System.out.println(petrov.toString());
         System.out.println(kozlov.toString());
         System.out.println(sidorov.toString());
