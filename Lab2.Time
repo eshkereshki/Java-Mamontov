@@ -1,3 +1,5 @@
+### Time.java
+```java
 class Time {
     private int seconds;
 
@@ -27,3 +29,4 @@ class Time {
         System.out.println("100000 секунд: " + time3.toString());
     }
 }
+```
