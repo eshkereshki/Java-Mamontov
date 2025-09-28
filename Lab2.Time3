@@ -5,36 +5,34 @@ class Time3 {
         this.seconds = seconds % (24 * 3600);
     }
 
-
-    public int getHours() {
-        return seconds / 3600;
-    }
-
-    public int getMinutes() {
-        return (seconds % 3600) / 60;
-    }
-
-    public int getSeconds() {
-        return seconds % 60;
-    }
+    public int getHours() { return seconds / 3600; }
+    public int getMinutes() { return (seconds % 3600) / 60; }
+    public int getSeconds() { return seconds % 60; }
 
     @Override
     public String toString() {
         return String.format("%d:%02d:%02d", getHours(), getMinutes(), getSeconds());
     }
 
-    public static void main(String[] args) {
+    public static void demo() {
+        System.out.println("\n Время (расширение 2)");
+
         Time3 time1 = new Time3(34056);
         Time3 time2 = new Time3(4532);
         Time3 time3 = new Time3(123);
 
-        System.out.println("Время 34056 секунд: " + time1.getHours() + " часов");
-        System.out.println("Время 4532 секунд: " + time2.getMinutes() + " минут");
-        System.out.println("Время 123 секунд: " + time3.getSeconds() + " секунд");
+        System.out.println("34056 секунд:");
+        System.out.println("  Полное время: " + time1.toString());
+        System.out.println("  Часы: " + time1.getHours());
+        System.out.println("  Минуты: " + time1.getMinutes());
+        System.out.println("  Секунды: " + time1.getSeconds());
 
-        System.out.println("\nПолное представление времени:");
-        System.out.println("34056 секунд = " + time1.toString());
-        System.out.println("4532 секунд = " + time2.toString());
-        System.out.println("123 секунд = " + time3.toString());
+        System.out.println("\n4532 секунд:");
+        System.out.println("  Полное время: " + time2.toString());
+        System.out.println("  Минуты: " + time2.getMinutes());
+
+        System.out.println("\n123 секунд:");
+        System.out.println("  Полное время: " + time3.toString());
+        System.out.println("  Секунды: " + time3.getSeconds());
     }
 }
