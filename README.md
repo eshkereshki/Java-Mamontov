@@ -428,6 +428,19 @@ pos будут вставлены значения массива ins.
 
 - Дружественный пользовательский интерфейс
 
+## Структура проекта
+
+```
+project/
+├── Name.java
+├── Time.java
+├── Time2.java
+├── Time3.java
+├── Employee.java
+├── Employee2.java
+└── Main.java
+```
+
 # Алгоритм работы заданий
 
 ## Задача 1.1: Имена (Name.java)
