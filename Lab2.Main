@@ -1,65 +1,69 @@
 import java.util.Scanner;
 
 public class Main {
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
+    private Scanner scanner;
+
+    public Main() {
+        this.scanner = new Scanner(System.in);
+    }
+
+
+    public void run() {
 
         while (true) {
-            System.out.println("\n ВЫБОР ПРОГРАММЫ");
-            System.out.println("1. Name - Имена");
-            System.out.println("2. Time - Время ");
-            System.out.println("3. Time2 - Время (расширение)");
-            System.out.println("4. Time3 - Время (расширение 2)");
-            System.out.println("5. Employee - Сотрудники");
-            System.out.println("6. Employee2 - Сотрудники (расширение)");
-            System.out.println("0. Выход");
-            System.out.print("Выберите программу (0-6): ");
-
-            int choice = scanner.nextInt();
+            showMenu();
+            String choice = scanner.nextLine();
 
             switch (choice) {
-                case 1:
-                    System.out.println("\n--- Name: Имена ---");
-                    Name.main(new String[]{});
+                case "1":
+                    Name.demo();
                     break;
-
-                case 2:
-                    System.out.println("\n--- Time:Время ---");
-                    Time.main(new String[]{});
+                case "2":
+                    Time.demo();
                     break;
-
-                case 3:
-                    System.out.println("\n--- Time2: Время (расширение) ---");
-                    Time2.main(new String[]{});
+                case "3":
+                    Time2.demo();
                     break;
-
-                case 4:
-                    System.out.println("\n--- Time3: Время (расширение 2) ---");
-                    Time3.main(new String[]{});
+                case "4":
+                    Time3.demo();
                     break;
-
-                case 5:
-                    System.out.println("\n--- Employee: Сотрудники ---");
-                    Employee.main(new String[]{});
+                case "5":
+                    Employee.demo();
                     break;
-
-                case 6:
-                    System.out.println("\n--- Employee2: Сотрудники (расширение) ---");
-                    Employee2.main(new String[]{});
+                case "6":
+                    Employee2.demo();
                     break;
-
-                case 0:
-                    System.out.println("Выход из программы");
+                case "0":
+                    System.out.println("Выход из программы. До свидания!");
                     scanner.close();
                     return;
-
                 default:
                     System.out.println("Неверный выбор! Попробуйте снова.");
             }
 
-            System.out.println("\nНажмите Enter для продолжения");
-            scanner.nextLine();
-            scanner.nextLine();
+            pause();
         }
+    }
+
+    private void showMenu() {
+        System.out.println("\n=== ГЛАВНОЕ МЕНЮ ===");
+        System.out.println("1. Name - Имена");
+        System.out.println("2. Time - Время");
+        System.out.println("3. Time2 - Время (расширение)");
+        System.out.println("4. Time3 - Время (расширение 2)");
+        System.out.println("5. Employee - Система сотрудников");
+        System.out.println("6. Employee2 - Система сотрудников (расширение)");
+        System.out.println("0. Выход");
+        System.out.print("Выберите программу: ");
+    }
+
+    private void pause() {
+        System.out.print("\nНажмите Enter для продолжения");
+        scanner.nextLine();
+    }
+
+    public static void main(String[] args) {
+        Main main = new Main();
+        main.run();
     }
 }
