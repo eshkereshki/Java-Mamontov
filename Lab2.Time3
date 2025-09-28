@@ -1,3 +1,5 @@
+## Time3.java
+```java
 class Time3 {
     private int seconds;
 
@@ -36,3 +38,4 @@ class Time3 {
         System.out.println("  Секунды: " + time3.getSeconds());
     }
 }
+```
