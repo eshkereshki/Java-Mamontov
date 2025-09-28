@@ -34,7 +34,7 @@ public class Main {
                     Employee2.demo();
                     break;
                 case "0":
-                    System.out.println("Выход из программы. До свидания!");
+                    System.out.println("Выход из программы.");
                     scanner.close();
                     return;
                 default:
