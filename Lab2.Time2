@@ -14,15 +14,16 @@ class Time2 {
         int hours = seconds / 3600;
         int minutes = (seconds % 3600) / 60;
         int secs = seconds % 60;
-
         return String.format("%d:%02d:%02d", hours, minutes, secs);
     }
 
-    public static void main(String[] args) {
+    public static void demo() {
+        System.out.println("\n Время (расширение)");
+
         Time2 time1 = new Time2(10000);
         Time2 time2 = new Time2(2, 3, 5);
 
-        System.out.println(time1.toString());
-        System.out.println(time2.toString());
+        System.out.println("10000 секунд: " + time1.toString());
+        System.out.println("2 часа 3 минуты 5 секунд: " + time2.toString());
     }
 }
