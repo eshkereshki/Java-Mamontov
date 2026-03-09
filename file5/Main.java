@@ -73,7 +73,7 @@ public class Main {
                     break;
 
                 case 5:
-                    GasStationTask.process(scanner);
+                    GasStationTask.process();
                     break;
 
                 case 6:
